@@ -1,64 +1,69 @@
 # 🃏 Fantasy Character Generator & Player Card Deck
 
-Ứng dụng tạo thẻ nhân vật viễn tưởng (Fantasy Player Card Generator) tương tác, tích hợp tạo ảnh chân thực/cartoon AI và tiểu sử nhân vật tự động bằng AI (Google Gemini).
+An interactive fantasy player card generator powered by React, TypeScript, Tailwind CSS, and Google Gemini AI for generating custom cartoon hero portraits and dramatic character origin stories.
 
 ---
 
-## 📖 Mô tả dự án (Project Overview)
+## 📖 Overview
 
-**Fantasy Character Generator** cho phép bạn khởi tạo các thẻ nhân vật nhập vai (RPG / Fantasy Player Cards) với đầy đủ chỉ số, ngoại hình, kỹ năng đặc trưng, tiểu sử và ảnh chân dung độc đáo. 
+**Fantasy Character Generator** allows tabletop RPG players, worldbuilders, and gamers to create high-quality fantasy character cards complete with randomized core survival stats, abilities, lore quotes, AI-generated cartoon video game portraits, and AI-generated backstories.
 
-### ✨ Các tính năng nổi bật:
-- 🃏 **Thiết kế Player Card cao cấp**: Giao diện dạng thẻ bài người chơi có viền kim loại sang trọng, hiển thị nổi bật các chỉ số sinh tồn: **Health (HP)**, **Mana (MP)**, và **Strength (STR)**.
-- 🎨 **Tạo chân dung Cartoon / Game Avatar bằng AI**: Tích hợp server-side Google Gemini (`gemini-3.1-flash-lite-image`) & dịch vụ fallback tự động vẽ nên ảnh nhân vật độc bản theo từng hệ Class & Race.
-- 📜 **Tạo tiểu sử nhân vật bằng AI (Generate Backstory)**: Nút sinh câu chuyện nguồn gốc 1-2 câu kịch tính bằng Gemini AI (`gemini-2.5-flash`).
-- 🎴 **Bộ sưu tập "My Deck" (Save to Deck)**: Lưu các nhân vật ưa thích vào bộ bài cá nhân, xem lại danh sách và xuất file dữ liệu đội hình (`Export My Deck`).
-- 🎲 **Mô phỏng gieo xúc xắc & Âm thanh Web Audio**: Hiệu ứng xúc xắc d4/d6/d20 quay sống động kèm âm thanh sống động.
+### ✨ Key Features
 
----
-
-## 🛠️ Công nghệ sử dụng (Tech Stack)
-
-- **Frontend**: React 18, Vite, TypeScript, Tailwind CSS, Motion (Framer Motion), Lucide React.
-- **Backend**: Node.js, Express, esbuild, tsx.
-- **AI Integration**: Google Gen AI SDK (`@google/genai`) với Google Gemini API.
+- 🃏 **Bordered Player Card UI**: Metallic frame layout with class-themed glowing aura accents and corner badges.
+- 📊 **Prominent Core Stats**: Each player card features randomized primary RPG stats: **Health (HP)**, **Mana (MP)**, and **Strength (STR)** alongside primary attribute modifiers.
+- 🎨 **AI Cartoon Portrait Generator**: Generates 2D cartoon video-game style hero portraits tailored to the character's Class & Race using Google Gemini (`gemini-3.1-flash-lite-image`) with automatic fallback support.
+- 📜 **AI Backstory Generator**: Creates a unique, dramatic 1 to 2 sentence origin story with the "Generate Backstory" button powered by Google Gemini (`gemini-2.5-flash`).
+- 🎴 **"My Deck" Collection System**: Save generated characters directly to your personal deck ("Save to Deck"), view your saved cards, and export your deck as a text summary.
+- 🎲 **Interactive Dice Roller & Audio**: Web Audio API sound effects paired with animated 3D-style dice rolls (d4, d6, d8, d10, d12, d20).
 
 ---
 
-## 🚀 Hướng dẫn cài đặt & Thiết lập (Setup & Installation)
+## 🛠️ Tech Stack
 
-### 1. Yêu cầu tiền đề (Prerequisites)
-- **Node.js**: Phiên bản 18.0.0 trở lên.
-- **npm**: Đi kèm với Node.js.
+- **Frontend**: React 18, Vite, TypeScript, Tailwind CSS, Motion (`motion/react`), Lucide React.
+- **Backend**: Node.js, Express, `esbuild`, `tsx`.
+- **AI Integration**: `@google/genai` (Google Gen AI SDK) accessing Gemini models server-side.
 
-### 2. Cài đặt các thư viện (Install Dependencies)
-Mở terminal trong thư mục dự án và chạy:
+---
+
+## 🚀 Setup & Installation
+
+### 1. Prerequisites
+- **Node.js**: Version 18.0.0 or higher.
+- **npm**: Included with Node.js.
+
+### 2. Install Dependencies
+Open your terminal in the project root directory and run:
 ```bash
 npm install
 ```
 
-### 3. Cấu hình biến môi trường (Environment Variables)
-Tạo file `.env` từ file mẫu `.env.example`:
+### 3. Environment Variable Setup
+Copy the example environment file to create your local `.env`:
 ```bash
 cp .env.example .env
 ```
-Mở `.env` và thêm khóa Gemini API của bạn (nếu có):
+
+Open `.env` and configure your Google Gemini API key:
 ```env
 GEMINI_API_KEY=your_google_gemini_api_key_here
 ```
-> *Lưu ý*: Nếu không cung cấp `GEMINI_API_KEY`, ứng dụng sẽ tự động chuyển sang cơ chế fallback sinh ảnh và tiểu sử thủ công/procedural mà không làm gián đoạn trải nghiệm.
+
+> **Note**: If `GEMINI_API_KEY` is not provided, the application will automatically fallback to procedural portrait generation and procedural story composition so all features remain functional.
 
 ---
 
-## 🏃‍♂️ Chạy ứng dụng (Running the Application)
+## 🏃‍♂️ Running the Application
 
-### Chạy ở môi trường phát triển (Development Mode)
+### Development Mode
+Runs the local dev server with hot reload at `http://localhost:3000`:
 ```bash
 npm run dev
 ```
-Trình duyệt sẽ mở ứng dụng tại địa chỉ: `http://localhost:3000`
 
-### Biên dịch & Chạy bản sản xuất (Production Build & Start)
+### Production Build & Launch
+Compiles the application and backend server into `dist/`, then launches the standalone server:
 ```bash
 npm run build
 npm start
@@ -66,17 +71,17 @@ npm start
 
 ---
 
-## 📁 Cấu trúc thư mục chính (Project Structure)
+## 📁 Project Structure
 
 ```text
 .
-├── server.ts                 # Backend Express server (xử lý API Gemini AI & tĩnh)
+├── server.ts                 # Express backend server (Gemini AI API proxy & static file server)
 ├── src/
-│   ├── App.tsx               # Component chính & giao diện ứng dụng
-│   ├── components/           # Các component UI (CharacterCard, PortraitGenerator, PartyDrawer, ...)
-│   ├── data/                 # Dữ liệu mẫu Class, Race, Trang bị
-│   ├── utils/                # Hàm sinh nhân vật, hiệu ứng âm thanh
-│   └── types.ts              # Định nghĩa kiểu dữ liệu TypeScript
-├── package.json              # Khai báo thư viện & kịch bản chạy
-└── README.md                 # Tài liệu hướng dẫn dự án
+│   ├── App.tsx               # Main application entry component
+│   ├── components/           # UI Components (CharacterCard, PortraitGenerator, PartyDrawer, etc.)
+│   ├── data/                 # Fantasy Classes, Races, and Equipment dataset
+│   ├── utils/                # Character generator algorithms & Web Audio synthesizers
+│   └── types.ts              # TypeScript interfaces for characters and stats
+├── package.json              # Dependency declarations and scripts
+└── README.md                 # Project documentation
 ```
