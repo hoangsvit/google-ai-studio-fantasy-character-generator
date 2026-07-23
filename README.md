@@ -4,6 +4,12 @@ An interactive fantasy player card generator powered by React, TypeScript, Tailw
 
 ---
 
+## 🖼️ Application Preview
+
+![Fantasy Character Generator Screenshot](./src/assets/images/app_screenshot_1784792267714.jpg)
+
+---
+
 ## 📖 Overview
 
 **Fantasy Character Generator** allows tabletop RPG players, worldbuilders, and gamers to create high-quality fantasy character cards complete with randomized core survival stats, abilities, lore quotes, AI-generated cartoon video game portraits, and AI-generated backstories.
