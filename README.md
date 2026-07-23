@@ -6,7 +6,7 @@ An interactive fantasy player card generator powered by React, TypeScript, Tailw
 
 ## 🖼️ Application Preview
 
-![Fantasy Character Generator Screenshot](./src/assets/images/app_screenshot_1784792267714.jpg)
+![Fantasy Character Generator Screenshot](./src/assets/images/app_screenshot_real_1784792528152.jpg)
 
 ---
 
