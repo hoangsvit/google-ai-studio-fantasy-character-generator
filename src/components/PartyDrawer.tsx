@@ -3,29 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   X, 
   Trash2, 
-  Users, 
-  Crown, 
-  Download, 
-  Eye
-} from 'lucide-react';
-import { FantasyCharacter } from '../types';
-import { ClassIcon } from './ClassIcon';
-import { CHARACTER_CLASSES } from '../data/fantasyData';
-
-interface PartyDrawerProps {
-  isOpen: boolean;
-  onClose: () => void;
-  party: FantasyCharacter[];
-  onRemoveCharacter: (id: string) => void;
-  onSelectCharacter: (char: FantasyCharacter) => void;
-  onClearParty: () => void;
-}
-
-import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  X, 
-  Trash2, 
   Layers, 
   Download, 
   Eye,

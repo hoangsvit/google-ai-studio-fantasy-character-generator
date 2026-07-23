@@ -3,35 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   Heart, 
   Shield, 
-  BookmarkPlus, 
-  Check, 
-  Copy, 
-  Sparkles, 
-  Zap, 
-  Dices, 
-  Quote as QuoteIcon,
-  Crown,
-  ScrollText
-} from 'lucide-react';
-import { FantasyCharacter } from '../types';
-import { CHARACTER_CLASSES } from '../data/fantasyData';
-import { ClassIcon } from './ClassIcon';
-import { CharacterPortrait } from './CharacterPortrait';
-import { PortraitGenerator } from './PortraitGenerator';
-
-interface CharacterCardProps {
-  character: FantasyCharacter;
-  onSaveParty?: (character: FantasyCharacter) => void;
-  isSaved?: boolean;
-  onRerollSingleAttr?: (type: 'stats' | 'ability' | 'backstory') => void;
-  onUpdateBackstory?: (newBackstory: string) => void;
-}
-
-import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { 
-  Heart, 
-  Shield, 
+  BookmarkPlus,
   Check, 
   Copy, 
   Sparkles, 
